@@ -5,78 +5,55 @@
 </head>
 <body>
 
-  <header><h1>TESTE DE FORMULÁRIO</h1></header>
+<h1>TESTE DE FORMULÁRIO</h1>
 
-  <form id="formulario">
-    <fieldset>
-      <legend>Dados Gerais</legend>
-      <label for="nome">Nome</label>
-      <input type="text" minlength="3" id="nome" name="nome" required />
-      
-      <label for="data_nascimento">Data De Nascimento:</label>
-      <input type="date" id="data_nascimento" name="data_nascimento" required />
-      
-      <label for="cpf">CPF:</label>
-      <input type="text" minlength="11" id="cpf" name="cpf" required />
-    </fieldset>
+<form id="formulario">
+  <fieldset>
+    <legend>Dados Gerais</legend>
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" minlength="3" required />
 
-    <fieldset>
-      <legend>Endereço</legend>
-      <label for="tipo_endereco">Tipo</label>
-      <select id="tipo_endereco" name="tipo_endereco" required>
-        <option value="">Selecione</option>
-        <option value="Rua">Rua</option>
-        <option value="Estrada">Estrada</option>
-        <option value="Rodovia">Rodovia</option>
-        <option value="Outros">Outros</option>
-      </select>
+    <label for="data_nascimento">Data de Nascimento</label>
+    <input type="date" id="data_nascimento" name="data_nascimento" required />
 
-      <label for="logradouro_endereco">Logradouro</label>
-      <input type="text" id="logradouro_endereco" name="logradouro_endereco" required />
+    <label for="cpf">CPF</label>
+    <input type="text" id="cpf" name="cpf" minlength="11" required />
+  </fieldset>
 
-      <label for="numero_endereco">Número:</label>
-      <input type="text" id="numero_endereco" name="numero_endereco" required />
+  <fieldset>
+    <legend>Endereço</legend>
+    <label for="tipo_endereco">Tipo</label>
+    <select id="tipo_endereco" name="tipo_endereco" required>
+      <option value="">Selecione</option>
+      <option value="Rua">Rua</option>
+      <option value="Estrada">Estrada</option>
+      <option value="Rodovia">Rodovia</option>
+      <option value="Outros">Outros</option>
+    </select>
 
-      <label for="complemento_endereco">Complemento:</label>
-      <input type="text" id="complemento_endereco" name="complemento_endereco" />
-    </fieldset>
+    <label for="logradouro_endereco">Logradouro</label>
+    <input type="text" id="logradouro_endereco" name="logradouro_endereco" required />
 
-    <fieldset>
-      <legend>Cartão Para Cadastro</legend>
-      <label for="bandeira">Bandeira</label>
-      <select id="bandeira" name="bandeira" required>
-        <option value="">Selecione</option>
-        <option value="Visa">Visa</option>
-        <option value="Mastercard">Mastercard</option>
-        <option value="Elo">Elo</option>
-        <option value="Outros">Outros</option>
-      </select>
+    <label for="numero_endereco">Número</label>
+    <input type="text" id="numero_endereco" name="numero_endereco" required />
 
-      <label for="titular">Titular Do Cartão</label>
-      <input type="text" id="titular" name="titular" required />
+    <label for="complemento_endereco">Complemento</label>
+    <input type="text" id="complemento_endereco" name="complemento_endereco" />
+  </fieldset>
 
-      <label for="numero_cartao">Número Do Cartão</label>
-      <input type="text" id="numero_cartao" name="numero_cartao" required />
+  <fieldset>
+    <button type="submit">Enviar Formulário</button>
+    <button type="reset">Limpar Formulário</button>
+  </fieldset>
+</form>
 
-      <label for="codigo_de_seguranca">Código De Segurança</label>
-      <input type="text" id="codigo_de_seguranca" name="codigo_de_seguranca" required />
-
-      <label for="data_de_validade">Data De Validade</label>
-      <input type="month" id="data_de_validade" name="data_de_validade" required />
-    </fieldset>
-
-    <fieldset>
-      <button type="submit">Enviar Formulário</button>
-      <button type="reset">Limpar Formulário</button>
-    </fieldset>
-  </form>
-
-  <script>
-    document.getElementById("formulario").addEventListener("submit", function(event) {
-      event.preventDefault(); // evita o envio real do formulário
-      window.location.href = "confirmacao.html"; // redireciona para página de confirmação
-    });
-  </script>
+<script>
+  // Captura o submit e redireciona
+  document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault(); // impede envio real
+    window.location.href = "confirmacao.html"; // vai para a página de confirmação
+  });
+</script>
 
 </body>
 </html>
