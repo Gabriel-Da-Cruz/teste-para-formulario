@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        formulario
+    </title>
+    <header><h1>TESTE DE FORMULARIO</h1></header>
+        <form action="confirmacao.html" method="post">
+            <fieldset>
+            <legend>Dados  Gerais</legend>
+            <label for="nome">Nome</label>
+            <input type="nome" minlength="3" id="nome" />
+            <label for="data_nascimento">Data De Nascimento:</label>
+            <input type="text" id="data_nascimento" />
+            <label for="cpf">CPF:</label>
+            <input type="cpf" minlength="11" id="cpf" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <label for="tipo_endereço">Tipo</label>
+            <select id="tipo_endereço">
+                <option value="">Selecione</option>
+                <option value="">Rua</option>
+                <option value="">Estrada</option>
+                <option value="">Rodovia</option>
+                <option value="">Outros</option>
+            </select>
+            <label for="logradouro_endereço">Logradouro</label>
+            <input type="text" id="logradouro_endereço" />
+            <label for="numero_endereço">Número:</label>
+            <input type="text" id="numero_endereço" />
+            <label for="complemento_endereço">Complemento:</label>
+            <input type="text" id="complemento_endereço" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Cartão Para Cadastro</legend>
+            <label for="bandeira">Bandeira</label>
+            <select id="bandeira">
+                <option value="">Selecione</option>
+                <option value="">Visa</option>
+                <option value="">Mastercard</option>
+                <option value="">Elo</option>
+                <option value="">Outros</option>
+            </select>
+            <label for="titular">Titular Do Cartão</label>
+            <input type="text" id="titular" />
+            <label for="numero_cartão">Número Do Cartão</label>
+            <input type="text" id="numero_cartão" />
+            <label for="codigo_de_segurança">Código De Segurança</label>
+            <input type="text" id="codigo_de_segurança" />
+            <label for="data_de_validade">Data De Validade</label>
+            <input type="text" id="data_de_validade" />
+        </fieldset>
+        <fieldset>
+            <button type="submit">Enviar Formulario</button>
+            <button type="reset">Limpar Formulario</button>
+        </fieldset>
+    </form>
+</html>
